@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "5ca5dfb4-686f-4200-af1d-197450b1d6b6",
+		"name": "Geoprospectors API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RequestToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://service.geoprospectors.com:8091/API/authenticate/requestToken?UserName=&Password=",
+					"protocol": "https",
+					"host": [
+						"service",
+						"geoprospectors",
+						"com"
+					],
+					"port": "8091",
+					"path": [
+						"API",
+						"authenticate",
+						"requestToken"
+					],
+					"query": [
+						{
+							"key": "UserName",
+							"value": ""
+						},
+						{
+							"key": "Password",
+							"value": ""
+						}
+					]
+				},
+				"description": "Requests Token from Geoprospectors Server"
+			},
+			"response": []
+		},
+		{
+			"name": "RequestJobList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://service.geoprospectors.com:8091/API/ServiceOrder/requestJobList?Access Token=&SN=&selector=999",
+					"protocol": "https",
+					"host": [
+						"service",
+						"geoprospectors",
+						"com"
+					],
+					"port": "8091",
+					"path": [
+						"API",
+						"ServiceOrder",
+						"requestJobList"
+					],
+					"query": [
+						{
+							"key": "Access Token",
+							"value": ""
+						},
+						{
+							"key": "SN",
+							"value": ""
+						},
+						{
+							"key": "selector",
+							"value": "999"
+						}
+					]
+				},
+				"description": "Requests all Jobs listed under the users account"
+			},
+			"response": []
+		},
+		{
+			"name": "requestECaData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://service.geoprospectors.com:8091/API/ServiceOrder/requestECaData?Access Token=&JobID=",
+					"protocol": "https",
+					"host": [
+						"service",
+						"geoprospectors",
+						"com"
+					],
+					"port": "8091",
+					"path": [
+						"API",
+						"ServiceOrder",
+						"requestECaData"
+					],
+					"query": [
+						{
+							"key": "Access Token",
+							"value": ""
+						},
+						{
+							"key": "JobID",
+							"value": ""
+						}
+					]
+				},
+				"description": "request ECa Data for a given JobID"
+			},
+			"response": []
+		},
+		{
+			"name": "refreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://service.geoprospectors.com:8091/API/authenticate/refreshToken?Access Token=",
+					"protocol": "https",
+					"host": [
+						"service",
+						"geoprospectors",
+						"com"
+					],
+					"port": "8091",
+					"path": [
+						"API",
+						"authenticate",
+						"refreshToken"
+					],
+					"query": [
+						{
+							"key": "Access Token",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
