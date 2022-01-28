@@ -125,6 +125,40 @@
 			"response": []
 		},
 		{
+			"name": "requestECaZones",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://service.geoprospectors.com:8091/API/ServiceOrder/requestECaZones?Access Token=&JobID=",
+					"protocol": "https",
+					"host": [
+						"service",
+						"geoprospectors",
+						"com"
+					],
+					"port": "8091",
+					"path": [
+						"API",
+						"ServiceOrder",
+						"requestECaZones"
+					],
+					"query": [
+						{
+							"key": "Access Token",
+							"value": ""
+						},
+						{
+							"key": "JobID",
+							"value": ""
+						}
+					]
+				},
+				"description": "request ECa Zones for a given JobID"
+			},
+			"response": []
+		},
+		{
 			"name": "refreshToken",
 			"request": {
 				"method": "POST",
