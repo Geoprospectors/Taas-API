@@ -7,3 +7,4 @@ Available endpoints:
 - requestTOKEN
 - requestJobList
 - requestECaData
+- requestECaZones
