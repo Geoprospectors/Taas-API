@@ -1,21 +1,17 @@
 # Taas-API
 TaaS API Description
 
-API to access Topsoil Mapper cloud processed data via API (BETA Stage).
+API to access Topsoil Mapper cloud processed data via API. Access to the TaaS API needs an active user account at the TaaS portal. For further questions please contact support@geoprospectors.com.
 
-Available endpoints:
-- requestTOKEN
-- requestJobList
-- requestECaData
-- requestECaZones
 
 Token & Data Service: https://service.geoprospectors.com:8091/API
 
 ## AUTHENTICATE
 
-The API uses bearer token to authenticate a request. POST a mail address and the password to the token service will issue an access token.
+The API uses bearer token to authenticate a request. POST a mail address and the password to the token service will issue an access token.<br />
+Available endpoints:
 
-**requestToken**
+<details><summary>requestToken</summary>
 
 https://{host service}/authenticate/requestToken (Post Request)
 
@@ -54,9 +50,9 @@ Example response:<br />
 "expires":"01.10.2021-13:22"<br />
 }
 ```
-
-**refreshToken**
-
+</details>
+<details><summary>refreshToken</summary>
+<br />
 https://{host service}/authenticate/requestToken (Post Request)
 
 Request
@@ -77,11 +73,14 @@ Example response:
 	Tokenupdated
  }
 ```
+</details>
 
 ## SERVICE ORDER
 
-**requestJobList**
-
+Standard data exchange endpoints can be accessed:
+<br />
+<details><summary>requestJobList</summary>
+<br />
 https://{Host Service}/ServiceOrder/requestJobList (Post Request)
 
 Request
@@ -119,9 +118,10 @@ Example response:
 }
 ]
 ```
+</details>
 
-**requestECaData**
-
+<details><summary>requestECaData</summary>
+<br />
 https://{Host Service}/ServiceOrder/requestECaData (Post Request)
 
 ***remark:*** only those JobIDs with the corresponding user privileges (Serial Number) can be requested. Valid Serial Number per user can be request wile Token request.
@@ -158,9 +158,9 @@ Example response:<br />
 }
 ]
 ```
-
-**requestECaZones**
-
+</details>
+<details><summary>requestECaZones</summary>
+<br />
 https://{Host Service}/ServiceOrder/requestECaZones (Post Request)
 
 ***remark:*** only those JobIDs with the corresponding user privileges (Serial Number) can be requested. Valid Serial Number per user can be request wile Token request.
@@ -195,3 +195,4 @@ Example response:<br />
 }
 ]
 ```
+</details>
