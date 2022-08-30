@@ -80,6 +80,82 @@ Example response:
 
 ## SERVICE ORDER
 
+**requestJobList**
 
+https://{Host Service}/ServiceOrder/requestJobList (Post Request)
 
+Request
+
+```
+{
+	“Access Token”: {Token}
+	“SN”: {Serial Number}
+	“selector”: {number}
+}
+```
+Response: {GeoJSON}
+```
+{ 
+“type”: “Point”,
+	“coordinates”: {XX,YY}
+	“properties”: {properties
+}
+
+Example response:
+
+[
+{"type": "FeatureCollection",
+  "features": [
+	{"type": "Feature",
+	  "geometry": {"type": "Point", "coordinates": [ 47.135445,16.16.88135]},
+	  "properties": 
+		{
+		"JobID": "177",
+		"Field Name": "Testfield",
+		"Area": "23.15",
+		"Date": "09/08/2020/13:11:31,4"
+		}
+	}]
+}
+]
+```
+
+**requestECaData**
+
+https://{Host Service}/ServiceOrder/requestECaData (Post Request)
+
+***remark:*** only those JobIDs with the corresponding user privileges (Serial Number) can be requested. Valid Serial Number per user can be request wile Token request.
+
+Request<br />
+```
+{
+	“Access Token”: {Token}
+	“JobID”: {JobID}
+}
+```
+Response: {GeoJSON}<br />
+```
+“type”: “Point”,
+	“coordinates”: {XX,YY}
+	“properties”: {properties}
+```
+
+Example response:<br />
+```
+[
+{"type": "FeatureCollection",
+  "features": [
+	{"type": "Feature",
+	  "geometry": {"type": "Point", "coordinates": [ 47.135445,16.16.88135]},
+	  "properties": 
+		{
+		"ECaR1": "8.1",
+		"ECaR2": "12.2",
+		"ECaR3": "14.8",
+		"ECaR4": "17.4"
+		}
+	}]
+}
+]
+```
 
