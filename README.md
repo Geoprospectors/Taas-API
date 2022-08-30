@@ -159,3 +159,39 @@ Example response:<br />
 ]
 ```
 
+**requestECaZones**
+
+https://{Host Service}/ServiceOrder/requestECaZones (Post Request)
+
+***remark:*** only those JobIDs with the corresponding user privileges (Serial Number) can be requested. Valid Serial Number per user can be request wile Token request.
+
+Request<br />
+```
+{
+	“Access Token”: {Token}
+	“JobID”: {JobID}
+}
+```
+Response: {GeoJSON}<br />
+```
+{ 
+“type”: “Polygon”,
+	“coordinates”: {XX,YY}
+	“properties”: {properties}
+}
+```
+Example response:<br />
+```
+[
+{"type": "FeatureCollection",
+  "features": [
+	{"type": "Feature",
+	  "geometry": {"type": "Polygon", "coordinates": [ 47.135445,16.16.88135 …]},
+	  "properties": 
+		{
+		"Zone": "1",
+		}
+	}]
+}
+]
+```
