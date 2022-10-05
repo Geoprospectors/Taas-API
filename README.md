@@ -118,6 +118,8 @@ Example response:
 }
 ]
 ```
+*Remark:*<br />
+Properties can be left empty or flag '0' for all files. Flag '999' will return those Jobs which are processed without error.<br />
 </details>
 
 <details><summary>requestECaData</summary>
