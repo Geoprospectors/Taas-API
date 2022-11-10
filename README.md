@@ -17,7 +17,7 @@ https://{host service}/authenticate/requestToken (Post Request)
 
 {<br />
 “UserName”: {Username}<br />
-“pwd”: {password}<br />
+“Password”: {password}<br />
 }<br />
 Response:<br />
 ```
