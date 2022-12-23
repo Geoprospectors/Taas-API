@@ -206,7 +206,6 @@ Request<br />
 ```
 {
 	“Access Token”: {Token}
-	“JobID”: {JobID}
 }
 ```
 Response: {GeoJSON}<br />
@@ -224,3 +223,31 @@ Response: {GeoJSON}<br />
 	“Systems”: {[System SN]}
 }
 ```
+</details>
+<details><summary>JobDetails</summary>
+<br />
+https://{Host Service}/ServiceOrder/JobDetails (Post Request)
+
+Request<br />
+```
+{
+	“Access Token”: {Token}
+	“JobID”: {JobID}
+}
+```
+Response: {GeoJSON}<br />
+```
+{
+	“CustNr”: {Customer Number}
+	“SerialNr”: {System Serial Number}
+	"User Name": {User Name, first last}
+	“Mail”: {mail address}
+	"Status": {processing status}
+	“User Class”: {userclass number}
+	"Config": {Processing Settings, "99" = Default}
+	"Date": {upload date}
+	"openArea": {processed grid area}
+	“Layer”: {[processed layer]}
+}
+```
+</details>
