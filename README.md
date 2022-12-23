@@ -198,3 +198,29 @@ Example response:<br />
 ]
 ```
 </details>
+<details><summary>AccountDetails</summary>
+<br />
+https://{Host Service}/ServiceOrder/AccountDetails (Post Request)
+
+Request<br />
+```
+{
+	“Access Token”: {Token}
+	“JobID”: {JobID}
+}
+```
+Response: {GeoJSON}<br />
+```
+{
+	“CustNr”: {Customer Number}
+	“Company”: {Company Name}
+	"User Name": {User Name, first last}
+	“Mail”: {mail address}
+	"Region": {geographic region}
+	“User Class”: {userclass number}
+	"Terms": {User Terms}
+	"ProductSet": {entitled products to access}
+	"openArea": {area entitlement}
+	“Systems”: {[System SN]}
+}
+```
