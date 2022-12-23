@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "5ca5dfb4-686f-4200-af1d-197450b1d6b6",
 		"name": "Geoprospectors API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16514791"
 	},
 	"item": [
 		{
@@ -108,6 +109,70 @@
 						"API",
 						"ServiceOrder",
 						"requestECaData"
+					],
+					"query": [
+						{
+							"key": "Access Token",
+							"value": ""
+						},
+						{
+							"key": "JobID",
+							"value": ""
+						}
+					]
+				},
+				"description": "request ECa Data for a given JobID"
+			},
+			"response": []
+		},
+		{
+			"name": "AccountDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://service.geoprospectors.com:8091/API/ServiceOrder/AccountDetails?Access Token=",
+					"protocol": "https",
+					"host": [
+						"service",
+						"geoprospectors",
+						"com"
+					],
+					"port": "8091",
+					"path": [
+						"API",
+						"ServiceOrder",
+						"AccountDetails"
+					],
+					"query": [
+						{
+							"key": "Access Token",
+							"value": ""
+						}
+					]
+				},
+				"description": "request ECa Data for a given JobID"
+			},
+			"response": []
+		},
+		{
+			"name": "JobDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://service.geoprospectors.com:8091/API/ServiceOrder/JobDetails?Access Token=&JobID=",
+					"protocol": "https",
+					"host": [
+						"service",
+						"geoprospectors",
+						"com"
+					],
+					"port": "8091",
+					"path": [
+						"API",
+						"ServiceOrder",
+						"JobDetails"
 					],
 					"query": [
 						{
